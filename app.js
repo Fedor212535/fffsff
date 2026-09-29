@@ -181,5 +181,9 @@ function wordsView() {
   });
 }
 
+$('#share').onclick = async () => {
+  const data = { title: 'Полиглот', text: 'Учи языки с приложением Полиглот', url: location.href.split('#')[0] };
+  try { if (navigator.share) await navigator.share(data); else { await navigator.clipboard.writeText(data.url); $('#share').textContent = '✓'; setTimeout(() => $('#share').textContent = '📤', 1500); } } catch (e) {}
+};
 renderStats();
 go('home');
