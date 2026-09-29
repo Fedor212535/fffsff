@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Полиглот — изучение языков</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌍 Полиглот</h1>
+    <select id="lang" aria-label="Язык"></select>
+    <div class="stats"><span id="streak">🔥 0</span><span id="xp">⭐ 0</span></div>
+  </header>
+  <nav id="nav">
+    <button data-view="home">Главная</button>
+    <button data-view="cards">Карточки</button>
+    <button data-view="quiz">Тест</button>
+    <button data-view="typing">Письмо</button>
+    <button data-view="words">Слова</button>
+  </nav>
+  <main id="view"></main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
